@@ -1,10 +1,8 @@
 streamlit
 opencv-python
-cv2
 tensorflow
 numpy
 matplotlib
 scikit-learn
 Pillow
 imblearn
-opencv-python-headless
