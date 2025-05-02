@@ -8,6 +8,7 @@ import os
 # Load the trained model
 import requests
 
+st.set_page_config(page_title="COVID-19 Radiography Classifier", layout="centered")
 st.write("OpenCV version:", cv2.__version__)
 
 model_url = "https://drive.google.com/file/d/1a8ZYKXN3aEIjffazMMj8Xlea5JNgAtek/view?usp=sharing"
@@ -29,7 +30,6 @@ def preprocess_image(image: Image.Image) -> np.ndarray:
     return np.expand_dims(image, axis=0)
 
 # Streamlit UI
-st.set_page_config(page_title="COVID-19 Radiography Classifier", layout="centered")
 st.title("COVID-19 Radiography Image Classifier")
 st.markdown("Upload a chest X-ray image, and the model will predict the condition.")
 
