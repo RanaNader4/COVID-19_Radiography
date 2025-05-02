@@ -13,9 +13,9 @@ st.set_page_config(page_title="COVID-19 Radiography Classifier", layout="centere
 
 model_path = "best_model.keras"
 if not os.path.exists(model_path):
-    # Use gdown to download from Google Drive
-    url = "https://drive.google.com/file/d/1a8ZYKXN3aEIjffazMMj8Xlea5JNgAtek/view?usp=sharing"
-    gdown.download(url, model_path, quiet=False)
+    file_id = "1a8ZYKXN3aEIjffazMMj8Xlea5JNgAtek"
+    url = f"https://drive.google.com/file/d/1a8ZYKXN3aEIjffazMMj8Xlea5JNgAtek/view?usp=sharing"
+    gdown.download(url, model_path, quiet=False, fuzzy=True)  # <- fuzzy=True is important!
 
 model = load_model(model_path)
 
