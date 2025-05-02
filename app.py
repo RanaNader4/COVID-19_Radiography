@@ -11,6 +11,14 @@ import gdown
 
 st.set_page_config(page_title="COVID-19 Radiography Classifier", layout="centered")
 
+# Label map for prediction output
+label_map = {
+    0: "COVID",
+    1: "Lung_Opacity",
+    2: "Normal",
+    3: "Viral Pneumonia"
+}
+
 model_path = "best_model.keras"
 if not os.path.exists(model_path):
     file_id = "1a8ZYKXN3aEIjffazMMj8Xlea5JNgAtek"
